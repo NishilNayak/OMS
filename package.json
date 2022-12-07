@@ -1,0 +1,17 @@
+{
+  "name": "oms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "postcss src/Css/style.css -o output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.2.4"
+  }
+}
