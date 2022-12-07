@@ -18,7 +18,7 @@
             <img src="./images/logo.png" alt="logo" class="h-12">
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <h1 href="" class="text-center text-indigo-600 hover:text-violet-500 hover:cursor-pointer font-bold text-2xl">Welcome to Mentor System.</h1>
+            <h1 href="" class="text-center text-indigo-600 hover:text-violet-500 hover:cursor-pointer font-bold text-2xl">Welcome to Mentor System (sagar).</h1>
         </nav>
     </div>
 </header>
