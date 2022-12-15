@@ -2,7 +2,10 @@
 module.exports = {
   content: ["*"],
   theme: {
-    extend: {},
+    fontFamily:{
+      Rampart: ["Rampart One","cursive"],
+      Patrick: ["Patrick Hand","cursive"],
+    },
   },
   plugins: [],
 }

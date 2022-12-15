@@ -29,7 +29,7 @@
             <section>
                 <img src="../images/image 1-1.png" alt="" class="h-72 animate-[bounce_9s_ease-in-out_infinite]">
             </section>
-            <div class="bg-gray-100 rounded-lg flex flex-col p-8 shadow-md shadow-gray-500/40">
+            <form class="bg-gray-100 rounded-lg flex flex-col p-8 shadow-md shadow-gray-500/40" method="POST">
                 <h2 class="text-gray-900 text-lg font-medium title-font mb-5 text-center">Login</h2>
                 <div class=" mb-4 mt-6">
                     <label for="E-id" class="leading-7 text-sm text-gray-600">Enter Your ID</label>
@@ -40,7 +40,7 @@
                     <input type="password" id="pass" name="pass" class="w-full bg-white rounded border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                 </div>
                 <button class=" text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-700 rounded text-lg">Login</button>
-            </div>
+            </form>
             </div>
         </div>
 </section>
