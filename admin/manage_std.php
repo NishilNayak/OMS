@@ -23,7 +23,7 @@
         @include 'head.php';
         ?>
         <!-- Mentor form -->
-        <div class="flex items-center gap-11 p-3 px-10">
+        <div class="flex items-center gap-11 p-2 px-10">
             <form action="" class="flex items-center gap-11 p-3 px-10">
                 <div class="">
                     <select name="" id="" class="p-2 rounded-lg border-violet-500 border cursor-pointer">
