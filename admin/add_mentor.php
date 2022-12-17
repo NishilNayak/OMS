@@ -22,6 +22,80 @@
         <?php
         @include 'head.php';
         ?>
+        <!--database connection-->
+        <?php
+$server_name="localhost";
+$username="root";
+$password="";
+$database_name="oms";
+
+$conn=mysqli_connect ($server_name,$username,$password,$database_name);
+//now check the connection
+if(!$conn)
+{
+	die("Connection Failed:" . mysqli_connect_error());
+
+}
+
+if(isset($_POST['submit']))
+{	 
+	 $first_name = $_POST['first_name'];
+	 $last_name = $_POST['last_name'];
+	 $email = $_POST['email'];
+	 $department = $_POST['department'];
+	 $photo = $_POST['photo'];
+
+	 $sql= "INSERT INTO mentor_list (first_name,last_name,email,department,photo)
+	 VALUES ('$first_name','$last_name','$email','$department','$photo')";
+
+	 if (mysqli_query($conn, $sql)) 
+	 {
+		echo "New Details Entry inserted successfully !";
+	 } 
+	 else
+     {
+		echo "Error: " . $sql . "" . mysqli_error($conn);
+	 }
+	 mysqli_close($conn);
+    }
+?>
+        <!--Database conn -->
+       <?php
+$server_name="localhost";
+$username="root";
+$password="";
+$database_name="oms";
+
+$conn=mysqli_connect ($server_name,$username,$password,$database_name);
+//now check the connection
+if(!$conn)
+{
+	die("Connection Failed:" . mysqli_connect_error());
+
+}
+
+if(isset($_POST['submit']))
+{	 
+	 $first_name = $_POST['first_name'];
+	 $last_name = $_POST['last_name'];
+	 $email = $_POST['email'];
+	 $department = $_POST['department'];
+	 $photo = $_POST['photo'];
+
+	 $sql= "INSERT INTO mentor_list (first_name,last_name,email,department,photo)
+	 VALUES ('$first_name','$last_name','$email','$department','$photo')";
+
+	 if (mysqli_query($conn, $sql)) 
+	 {
+		echo "New Details Entry inserted successfully !";
+	 } 
+	 else
+     {
+		echo "Error: " . $sql . "" . mysqli_error($conn);
+	 }
+	 mysqli_close($conn);
+    }
+?>
         <!-- Mentor form -->
         <div class="flex items-center justify-end gap-11 p-3 px-10">
             <div class="bg-violet-600 p-2 text-white flex gap-3 shadow-md shadow-violet-300 hover:bg-violet-800 cursor-pointer text-center justify-between">
@@ -33,24 +107,24 @@
             <form action="" method="post">
                 <div class="grid grid-cols-2 gap-4">
                     <div class="form-group mb-6">
-                        <input type="text" name="fname" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="First Name" required>
+                        <input type="text" name="first_name" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="First Name" required>
                     </div>
                     <div class="form-group mb-6">
-                        <input type="text" name="fname" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Last Name" required>
+                        <input type="text" name="last_name" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Last Name" required>
                     </div>
                 </div>
                 <div class="form-group mb-6">
-                    <input type="email" name="fname" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="abc@gmail.com" required>
+                    <input type="email" name="email" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="abc@gmail.com" required>
                 </div>
                 <div class="form-group mb-6">
-                    <input type="text" name="fname" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Department" required>
+                    <input type="text" name="department" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Department" required>
                 </div>
                 <div class="form-group mb-6 flex">
                     <label for="photo" class="p-2"> Photo</label>
-                    <input type="file" name="fname" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Photo" required>
+                    <input type="file" name="photo" id="" class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Photo" required>
                 </div>
                 <div class="form-group mb-6 bg-violet-600 text-white shadow-md shadow-gray-600 rounded-lg hover:bg-violet-800">
-                    <input type="submit" name="fname" id="" class="block w-full px-3 py-1.5 text-base font-normal text-white border border-none rounded transition ease-in-out m-0 cursor-pointer">
+                    <input type="submit" name="submit" id="" class="block w-full px-3 py-1.5 text-base font-normal text-white border border-none rounded transition ease-in-out m-0 cursor-pointer" >
                 </div>
             </form>
         </div>

@@ -42,7 +42,7 @@
                     <li class="hover:bg-violet-500 hover:text-white"><a href="../admin/add_std.php"class="p-2">Add Students</a></li>
                     <li class="hover:bg-violet-500 hover:text-white"><a href="../admin/manage_std.php"class="p-2">Manage Students</a></li>
                     <li class="hover:bg-violet-500 hover:text-white"><a href="#"class="p-2">Assign Students</a></li>
-                    <li class="hover:bg-violet-500 hover:text-white"><a href="#"class="p-2">View Students</a></li>
+                    <li class="hover:bg-violet-500 hover:text-white"><a href="../admin/view_std.php"class="p-2">View Students</a></li>
                 </ul>
             </li>
             <li>
